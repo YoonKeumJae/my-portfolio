@@ -53,7 +53,7 @@ function App() {
   const selectedProject = isProjectPage ? projects.find((project) => currentLocation === `#/portfolio/${project.style}`) : undefined
 
   useEffect(() => {
-    document.title = isProjectPage ? `${selectedProject?.title ?? '프로젝트를 찾을 수 없어요'} | 나의 포트폴리오` : isPortfolioPage ? '포트폴리오 목록 | 나의 포트폴리오' : isAboutPage ? '자기소개 | 나의 포트폴리오' : '나의 포트폴리오'
+    document.title = isProjectPage ? `${selectedProject?.title ?? '프로젝트를 찾을 수 없어요'} | 김개발` : isPortfolioPage ? '포트폴리오 목록 | 김개발' : isAboutPage ? '자기소개 | 김개발' : '김개발 | 포트폴리오'
 
     if (isPortfolioPage || isAboutPage || isProjectPage) {
       window.scrollTo({ top: 0, behavior: 'instant' })
@@ -69,8 +69,8 @@ function App() {
       <a className="skip-link" href="#main" onClick={(event) => { event.preventDefault(); document.getElementById('main')?.focus(); document.getElementById('main')?.scrollIntoView({ block: 'start' }) }}>본문으로 바로가기</a>
       <header className="site-header">
         <div className="header-inner">
-          <a className="wordmark" href="#home" aria-label="나의 포트폴리오 홈">
-            <span className="brand-symbol" aria-hidden="true">✳</span> my portfolio<span className="brand-dot">.</span>
+          <a className="wordmark" href="#home" aria-label="김개발 포트폴리오 홈">
+            <span className="brand-symbol" aria-hidden="true">✳</span> 김개발<span className="brand-dot">.</span>
           </a>
           <nav aria-label="주요 메뉴">
             <a href="#/about" aria-current={isAboutPage ? 'page' : undefined}>자기소개</a>
@@ -83,7 +83,7 @@ function App() {
         <section className="hero page-width" id="home" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> A LITTLE ABOUT ME, A LOT TO EXPLORE</p>
-            <h1 id="hero-title">작은 호기심이,<br />나만의 <span className="underlined">결과물로.</span></h1>
+            <h1 id="hero-title">안녕하세요,<br />김개발입니다<span className="underlined">.</span></h1>
             <p className="hero-description">배우고, 시도하고, 만들어 가는 중입니다.<br />나의 관심사와 도전이 쌓이는 이곳에 오신 걸 환영해요.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a>
@@ -109,7 +109,7 @@ function App() {
         </section>
         <div className="section-divider page-width"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></div>
         <section className="about-section page-width" id="about" aria-labelledby="about-title">
-          <div className="section-heading"><p className="eyebrow">01 / ABOUT ME</p><h2 id="about-title">안녕하세요,<br />이런 사람입니다<span>.</span></h2></div>
+          <div className="section-heading"><p className="eyebrow">01 / ABOUT ME</p><h2 id="about-title">김개발은,<br />이런 사람입니다<span>.</span></h2></div>
           <div className="about-content">
             <span className="example-label">자기소개를 채워 보세요</span>
             <h3>나를 가장 잘 설명하는<br />한 문장은 무엇인가요?</h3>
@@ -136,7 +136,7 @@ function App() {
             <div className="about-profile-art" aria-hidden="true"><span>✳</span><p>STILL LEARNING,<br />ALWAYS GROWING.</p><div>나만의 속도로,<br />나만의 방향으로.</div></div>
             <div className="about-content">
               <span className="example-label">나의 이야기로 채워 보세요</span>
-              <h2>안녕하세요,<br />이런 사람입니다<span>.</span></h2>
+              <h2>안녕하세요,<br />김개발입니다<span>.</span></h2>
               <p>나를 가장 잘 설명하는 한 문장으로 시작해 보세요. 좋아하는 것, 요즘 배우는 것, 앞으로 해 보고 싶은 일을 자신만의 이야기로 소개해 주세요.</p>
               <dl className="about-details">
                 <div><dt>관심 있는 것</dt><dd>시간 가는 줄 모르고 빠져드는 주제나 취미를 적어 주세요.</dd></div>
@@ -192,7 +192,7 @@ function App() {
           </> : <div className="project-not-found"><h1 id="project-title" tabIndex={-1}>프로젝트를 찾을 수 없어요.</h1><p>주소를 확인하거나 포트폴리오 목록에서 작업을 선택해 주세요.</p><a className="button button-primary" href="#/portfolio">포트폴리오 목록 보기 <span aria-hidden="true">→</span></a></div>}
         </section>}
       </main>
-      <footer className="site-footer page-width"><a className="wordmark" href="#home">my portfolio<span className="brand-dot">.</span></a><p>나의 이야기는 계속됩니다.</p><button className="back-top" type="button" onClick={() => { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); document.getElementById('main')?.focus({ preventScroll: true }) }}>맨 위로 <span aria-hidden="true">↑</span></button></footer>
+      <footer className="site-footer page-width"><a className="wordmark" href="#home">김개발<span className="brand-dot">.</span></a><p>나의 이야기는 계속됩니다.</p><button className="back-top" type="button" onClick={() => { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); document.getElementById('main')?.focus({ preventScroll: true }) }}>맨 위로 <span aria-hidden="true">↑</span></button></footer>
     </>
   )
 }
