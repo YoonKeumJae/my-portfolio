@@ -169,7 +169,7 @@ function App() {
         {isPortfolioPage && <section className="portfolio-section portfolio-page" aria-labelledby="portfolio-title">
           <div className="page-width">
             <a className="text-link list-back" href="#home"><span aria-hidden="true">←</span> 홈으로 돌아가기</a>
-            <div className="portfolio-heading"><div><p className="eyebrow">MY PORTFOLIO / SELECTED WORK</p><h1 id="portfolio-title" tabIndex={-1}>포트폴리오<span>.</span></h1><p className="list-description">작은 호기심에서 시작한 작업들을 모았습니다.</p></div><p>프로젝트 예시입니다.<br />직접 만든 작업으로 채워 보세요.</p></div>
+            <div className="portfolio-heading"><div><p className="eyebrow">MY PORTFOLIO / SELECTED WORK</p><h1 id="portfolio-title" tabIndex={-1}>포트폴리오<span>.</span></h1><p className="list-description">작은 호기심에서 시작한 작업들을 모았습니다.</p></div></div>
             <div className="list-summary"><span>전체 프로젝트</span><span>{projects.length.toString().padStart(2, '0')}</span></div>
             <div className="project-grid">
               {projects.map((project) => (
