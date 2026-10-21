@@ -128,24 +128,43 @@ function App() {
         {isAboutPage && <section className="about-page page-width" aria-labelledby="about-page-title">
           <a className="text-link list-back" href="#home"><span aria-hidden="true">←</span> 홈으로 돌아가기</a>
           <div className="about-page-heading">
-            <p className="eyebrow">MY STORY / ABOUT ME</p>
-            <h1 id="about-page-title" tabIndex={-1}>자기소개<span>.</span></h1>
-            <p className="list-description">좋아하는 것과 배우는 것, 그리고 앞으로의 나에 대한 이야기.</p>
+            <p className="eyebrow">김개발을 소개합니다</p>
+            <h1 id="about-page-title" tabIndex={-1}>안녕하세요,<br />김개발입니다<span>.</span></h1>
+            <p className="list-description">게임과 디지털 기기를 좋아하고, 문제 해결과 기기 다루기를 잘하며 코딩을 더 배우고 싶어요.</p>
           </div>
           <div className="about-profile">
-            <div className="about-profile-art" aria-hidden="true"><span>✳</span><p>STILL LEARNING,<br />ALWAYS GROWING.</p><div>나만의 속도로,<br />나만의 방향으로.</div></div>
+            <div className="about-profile-art" aria-hidden="true"><span>⌘</span><p>내가 좋아하는 것</p><div>게임과<br />디지털 기기</div></div>
             <div className="about-content">
-              <span className="example-label">나의 이야기로 채워 보세요</span>
-              <h2>안녕하세요,<br />김개발입니다<span>.</span></h2>
-              <p>나를 가장 잘 설명하는 한 문장으로 시작해 보세요. 좋아하는 것, 요즘 배우는 것, 앞으로 해 보고 싶은 일을 자신만의 이야기로 소개해 주세요.</p>
-              <dl className="about-details">
-                <div><dt>관심 있는 것</dt><dd>시간 가는 줄 모르고 빠져드는 주제나 취미를 적어 주세요.</dd></div>
-                <div><dt>요즘 배우는 것</dt><dd>새롭게 배우고 있거나 도전하고 있는 것을 소개해 주세요.</dd></div>
-                <div><dt>앞으로의 목표</dt><dd>만들어 보고 싶은 것, 이루고 싶은 작은 목표를 적어 주세요.</dd></div>
-              </dl>
-              <a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a>
+              <span className="example-label">내가 좋아하는 것</span>
+              <h2>관심사와 취미</h2>
+              <p>게임과 디지털 기기에 관심이 있어요.</p>
+              <div className="interest-tags"><span># 게임</span><span># 디지털 기기</span></div>
             </div>
           </div>
+          <div className="about-details">
+            <section className="about-detail-card" aria-labelledby="about-strengths-title">
+              <p className="about-detail-label">내가 잘하는 것</p>
+              <h2 id="about-strengths-title">문제 해결과<br />기기 다루기</h2>
+              <p>문제를 해결하고 기기를 다루는 것을 잘해요.</p>
+            </section>
+            <section className="about-detail-card about-learning-card" aria-labelledby="about-learning-title">
+              <p className="about-detail-label">앞으로 배우고 싶은 것</p>
+              <h2 id="about-learning-title">기기와 코딩</h2>
+              <p>기기와 코딩을 더 배우고 싶어요.</p>
+            </section>
+          </div>
+          <section className="about-activities" aria-labelledby="about-activities-title">
+            <p className="about-detail-label">내가 해본 활동이나 작품</p>
+            <h2 id="about-activities-title">활동과 작품</h2>
+            <p>아직 소개할 활동이나 작품은 정해지지 않았어요. 나중에 직접 해본 활동이나 만든 작품을 추가할 수 있어요.</p>
+          </section>
+          <section className="about-goal" aria-labelledby="about-goal-title">
+            <div>
+              <p className="about-detail-label">앞으로의 목표</p>
+              <h2 id="about-goal-title">기기와 코딩을<br />더 배우고 싶어요<span>.</span></h2>
+            </div>
+            <span aria-hidden="true">↗</span>
+          </section>
         </section>}
         {isPortfolioPage && <section className="portfolio-section portfolio-page" aria-labelledby="portfolio-title">
           <div className="page-width">
