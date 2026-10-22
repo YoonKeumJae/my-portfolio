@@ -87,6 +87,12 @@ h2 > span { color: var(--blue); }
 .shape-two { bottom: -72px; left: -7px; background: #c0ceea; }
 .creative-caption { position: absolute; top: 54px; left: 27px; font-family: Georgia, serif; font-size: 42px; line-height: 1.03; color: #355d9e; letter-spacing: -2px; }
 .creative-caption em { font-weight: 400; }
+.todo-list { background: #eaf1ff; }
+.todo-board { position: absolute; top: 17%; left: 19%; display: grid; width: 62%; gap: 10px; padding: 18px 20px; transform: rotate(-4deg); border: 1px solid #d3def0; border-radius: 7px; background: #fff; box-shadow: 7px 8px 0 #9ab5e1; }
+.todo-board-title { margin-bottom: 2px; color: #355d9e; font-size: clamp(13px, 2vw, 20px); font-weight: 800; letter-spacing: -.5px; }
+.todo-row { display: flex; align-items: center; gap: 8px; color: #68768a; font-size: clamp(9px, 1.2vw, 12px); }
+.todo-check { display: grid; width: 15px; height: 15px; flex: 0 0 auto; place-items: center; border: 1px solid #9ab5e1; border-radius: 4px; color: white; font-size: 10px; font-style: normal; }
+.todo-check.is-done { border-color: #315fae; background: #315fae; }
 .project-category { font-size: 8px; font-weight: 750; letter-spacing: 1px; color: #466798; margin-bottom: 10px; }
 .project-card h3 { font-size: 17px; letter-spacing: -.7px; margin: 0 0 8px; }
 .project-card-link { display: block; border-radius: 6px; }
@@ -118,6 +124,9 @@ h2 > span { color: var(--blue); }
 .detail-story-section h2 { font-size: 23px; letter-spacing: -.8px; }
 .detail-story-section h2 > span { font-size: 10px; letter-spacing: 1px; margin-right: 13px; vertical-align: middle; }
 .detail-story-section > p, .detail-story-section ol { margin: 0; font-size: 14px; line-height: 1.95; color: var(--muted); word-break: keep-all; }
+.detail-project-meta { display: grid; gap: 8px; color: var(--muted); font-size: 14px; line-height: 1.95; }
+.detail-project-meta p { margin: 0; }
+.detail-project-meta strong { display: inline-block; min-width: 84px; color: #202a39; }
 .detail-story-section ol { padding-left: 21px; }
 .detail-story-section li { padding-left: 5px; margin-bottom: 10px; }
 .detail-story-section li:last-child { margin-bottom: 0; }
