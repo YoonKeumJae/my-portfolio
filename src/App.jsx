@@ -13,6 +13,7 @@ function getCurrentLocation() {
 const projects = [
   {
     number: '01', category: 'WEB · 웹사이트', title: '나를 소개하는 첫 번째 공간', description: '내 이야기와 관심사를 담아 만든 웹사이트', style: 'website',
+    isExample: true,
     overview: '자기소개와 프로젝트를 한곳에서 볼 수 있는 개인 포트폴리오 웹사이트입니다. 나를 처음 만나는 사람도 관심사와 작업을 쉽게 이해할 수 있는 공간을 생각했습니다.',
     goal: '흩어져 있는 작업과 경험을 모아 나만의 이야기로 보여 주는 것이 목표입니다. 소개에서 프로젝트 목록, 상세 내용까지 자연스럽게 이어지는 흐름을 만듭니다.',
     process: ['소개하고 싶은 나의 관심사와 프로젝트를 정리합니다.', '홈, 자기소개, 포트폴리오 목록과 상세 화면을 구성합니다.', '화면 크기를 바꿔 가며 글자가 잘 읽히고 메뉴가 동작하는지 확인합니다.'],
@@ -20,6 +21,7 @@ const projects = [
   },
   {
     number: '02', category: 'IDEA · 아이디어', title: '일상의 작은 불편함 해결하기', description: '주변의 문제를 발견하고 해결 방법을 고민한 기록', style: 'idea',
+    isExample: true,
     overview: '학교나 일상에서 겪는 작은 불편함을 발견하고, 해결 아이디어를 구체적인 화면으로 옮겨 보는 프로젝트입니다. 자주 반복되는 문제 한 가지에서 출발합니다.',
     goal: '누가 어떤 상황에서 불편을 느끼는지 이해하고, 꼭 필요한 기능으로 해결 방법을 제안합니다. 기능의 수보다 문제를 얼마나 잘 해결하는지에 집중합니다.',
     process: ['불편했던 상황과 그 상황을 겪는 사람을 구체적으로 적습니다.', '가능한 해결 방법을 비교하고 핵심 기능 한 가지를 선택합니다.', '간단한 시제품을 만들어 직접 사용해 보고 개선할 점을 정리합니다.'],
@@ -27,10 +29,19 @@ const projects = [
   },
   {
     number: '03', category: 'CREATIVE · 자유 프로젝트', title: '좋아하는 것에서 시작한 작업', description: '호기심을 따라 시도하고 새롭게 만들어 본 결과물', style: 'creative',
+    isExample: true,
     overview: '좋아하는 음악, 그림, 게임 등 나만의 관심사를 새로운 결과물로 표현하는 자유 프로젝트입니다. 작은 아이디어라도 직접 만들어 보는 데 의미를 둡니다.',
     goal: '좋아하는 것의 어떤 부분을 표현하고 싶은지 정하고, 자신만의 시각을 담은 결과물을 완성합니다. 웹페이지나 작은 도구 등 알맞은 형태를 자유롭게 선택합니다.',
     process: ['관심 있는 주제와 떠오르는 아이디어를 모읍니다.', '표현할 분위기와 형태를 정하고 작은 부분부터 만듭니다.', '완성한 결과를 돌아보며 다음에 더 시도하고 싶은 것을 정리합니다.'],
     learning: '아이디어를 구체화하고 여러 방법을 시도하며 나만의 표현 방식을 찾아봅니다. 작업하면서 새롭게 알게 된 점과 가장 마음에 드는 부분을 소개해 보세요.',
+  },
+  {
+    number: '04', category: 'APP · 할 일 관리', title: '투두리스트', description: '메모장 대신 할 일을 추가하고 완료 여부를 관리하는 투두리스트', style: 'todo-list',
+    isExample: false, role: '개인 작업', tools: ['GitHub Copilot App'],
+    overview: '메모장에 할 일을 적으며 관리하는 불편함을 줄이기 위해 만들었습니다. 할 일을 추가하고, 완료 표시하거나 삭제할 수 있습니다.',
+    goal: '메모장으로 할 일을 관리할 때의 불편함을 줄이고 할 일의 상태를 한곳에서 확인합니다.',
+    process: ['혼자 GitHub Copilot App을 활용한 바이브코딩으로 만들었습니다.', '마음에 들지 않던 디자인을 예시 이미지로 설명해 원하는 모습으로 수정했습니다.'],
+    learning: '예시 이미지를 첨부하면 원하는 디자인 방향을 전달하고 화면을 수정할 수 있었습니다.',
   },
 ]
 
@@ -41,6 +52,7 @@ function ProjectArtwork({ project, className = '' }) {
       {project.style === 'website' && <div className="mini-browser"><div className="mini-toolbar"><i /><i /><i /></div><div className="mini-layout"><span>HELLO!</span><div /><p>My little corner<br />of the internet.</p></div></div>}
       {project.style === 'idea' && <><div className="idea-circle" /><span className="idea-asterisk">✳</span><span className="idea-caption">WHAT IF?</span></>}
       {project.style === 'creative' && <><div className="creative-shape shape-one" /><div className="creative-shape shape-two" /><span className="creative-caption">make<br /><em>something.</em></span></>}
+      {project.style === 'todo-list' && <div className="todo-board"><span className="todo-board-title">오늘 할 일</span><span className="todo-row"><i className="todo-check" />할 일 추가</span><span className="todo-row"><i className="todo-check is-done">✓</i>완료 표시</span><span className="todo-row"><i className="todo-check" />목록 정리</span></div>}
     </div>
   )
 }
@@ -196,16 +208,17 @@ function App() {
             <div className="detail-banner">
               <ProjectArtwork project={selectedProject} className="detail-art" />
               <div className="detail-overview">
-                <span className="example-label">실습용 예시</span>
+                {selectedProject.isExample && <span className="example-label">실습용 예시</span>}
                 <h2>프로젝트 소개</h2>
                 <p>{selectedProject.overview}</p>
-                <p className="detail-example-note">소개와 과정은 예시입니다. 직접 만든 프로젝트의 내용과 이미지로 바꿔 보세요.</p>
+                {selectedProject.isExample && <p className="detail-example-note">소개와 과정은 예시입니다. 직접 만든 프로젝트의 내용과 이미지로 바꿔 보세요.</p>}
               </div>
             </div>
             <div className="detail-story">
               <section className="detail-story-section" aria-labelledby="project-goal"><h2 id="project-goal"><span>01</span> 왜 만들었나요?</h2><p>{selectedProject.goal}</p></section>
               <section className="detail-story-section" aria-labelledby="project-process"><h2 id="project-process"><span>02</span> 어떻게 만들었나요?</h2><ol>{selectedProject.process.map((step) => <li key={step}>{step}</li>)}</ol></section>
               <section className="detail-story-section" aria-labelledby="project-learning"><h2 id="project-learning"><span>03</span> 무엇을 배웠나요?</h2><p>{selectedProject.learning}</p></section>
+              {(selectedProject.role || selectedProject.tools?.length > 0) && <section className="detail-story-section" aria-labelledby="project-tools"><h2 id="project-tools"><span>04</span> 작업 정보</h2><div className="detail-project-meta">{selectedProject.role && <p><strong>작업 형태</strong>{selectedProject.role}</p>}{selectedProject.tools?.length > 0 && <p><strong>사용 도구</strong>{selectedProject.tools.join(', ')}</p>}</div></section>}
             </div>
             <div className="detail-bottom"><p>다른 작업도 둘러보세요.</p><a className="button button-primary" href="#/portfolio">목록으로 돌아가기 <span aria-hidden="true">→</span></a></div>
           </> : <div className="project-not-found"><h1 id="project-title" tabIndex={-1}>프로젝트를 찾을 수 없어요.</h1><p>주소를 확인하거나 포트폴리오 목록에서 작업을 선택해 주세요.</p><a className="button button-primary" href="#/portfolio">포트폴리오 목록 보기 <span aria-hidden="true">→</span></a></div>}
